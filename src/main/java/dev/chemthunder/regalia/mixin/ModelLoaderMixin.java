@@ -30,5 +30,6 @@ public abstract class ModelLoaderMixin {
             ResourceManager resourceManager, BlockColors blockColors, Profiler profiler, int mipmapLevel, CallbackInfo ci
     ) {
         this.addModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "helianthi_3d", "inventory"));
+        this.addModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "skarlet_promise_3d", "inventory"));
     }
 }

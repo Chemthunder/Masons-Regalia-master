@@ -1,4 +1,4 @@
-package dev.chemthunder.regalia.item;
+package dev.chemthunder.regalia.item.divinity;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
