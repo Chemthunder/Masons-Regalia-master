@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
@@ -21,22 +22,22 @@ public class EffigyItem extends Item {
 
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-            banishPlayer(user, stack, entity, hand);
+           if (entity.getHealth() <= 4.0f)
+               banishPlayer(user, stack, entity, hand);
             return ActionResult.PASS;
     }
 
     public static void banishPlayer(PlayerEntity user, ItemStack stack, LivingEntity entity, Hand hand) {
          World world = entity.getWorld();
-
-
             entity.setHealth(10f);
             stack.decrement(1);
             user.giveItemStack(RegaliaItems.BROKEN_EFFIGY.getDefaultStack());
             user.swingHand(Hand.MAIN_HAND);
             user.playSound(new SoundEvent(SoundEvents.ITEM_TRIDENT_THUNDER.getId()), 5, 5);
-            entity.teleport(entity.getX() + 5000000, entity.getY() + 100, entity.getZ());
+            entity.teleport(entity.getX() + 50, entity.getY() + 1000000, entity.getY() + 50);
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 999999999, 250));
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 999999999, 250));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 999999999, 250));
-            world.addParticle(ParticleTypes.SOUL, entity.getX(), entity.getY(), entity.getZ(), 0, 3, 0);
+            world.addParticle(ParticleTypes.SOUL, entity.getX(), entity.getY(), entity.getZ(), 0, 0, 0);
     }
 }

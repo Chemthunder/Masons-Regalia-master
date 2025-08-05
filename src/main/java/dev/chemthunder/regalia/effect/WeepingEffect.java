@@ -15,6 +15,11 @@ public class WeepingEffect extends StatusEffect {
 
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
+
+
+
+
+
         return true;
     }
 
