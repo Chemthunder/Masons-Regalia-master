@@ -2,13 +2,11 @@ package dev.chemthunder.regalia.init;
 
 import dev.chemthunder.regalia.MasonsRegalia;
 import dev.chemthunder.regalia.item.divinity.*;
-import dev.chemthunder.regalia.item.femboyihop.FemCookieItem;
 import dev.chemthunder.regalia.item.weaponry.FollyScytheItem;
 import dev.chemthunder.regalia.item.weaponry.FrostbearerItem;
 import dev.chemthunder.regalia.item.weaponry.HelianthiItem;
 import dev.chemthunder.regalia.item.weaponry.SkarletItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolMaterials;
@@ -16,7 +14,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
-import javax.tools.Tool;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
