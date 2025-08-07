@@ -34,7 +34,7 @@ public class EffigyItem extends Item {
         user.giveItemStack(RegaliaItems.BROKEN_EFFIGY.getDefaultStack());
         user.swingHand(Hand.MAIN_HAND);
         user.playSound(new SoundEvent(SoundEvents.ITEM_TRIDENT_THUNDER.getId()), 5, 5);
-        entity.teleport(entity.getX() + 50, entity.getY() + 1000000, entity.getY() + 50);
+        entity.teleport(entity.getX() + 50, entity.getY() + 2500000, entity.getY() + 50);
         entity.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 999999999, 250));
         world.addParticle(ParticleTypes.SOUL, entity.getX(), entity.getY(), entity.getZ(), 0, 0.4, 0);
         world.addParticle(ParticleTypes.SOUL, entity.getX(), entity.getY(), entity.getZ(), 0, 0.3, 0);

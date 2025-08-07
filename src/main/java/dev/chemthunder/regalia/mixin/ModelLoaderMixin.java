@@ -31,5 +31,6 @@ public abstract class ModelLoaderMixin {
     ) {
         this.addModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "helianthi_3d", "inventory"));
         this.addModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "skarlet_promise_3d", "inventory"));
+        this.addModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "greatest_foe_3d", "inventory"));
     }
 }

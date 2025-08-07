@@ -24,6 +24,10 @@ public abstract class ItemRendererMixin {
         if (stack.isOf(RegaliaItems.SKARLET_PROMISE) && renderMode != ModelTransformation.Mode.GUI && renderMode != ModelTransformation.Mode.GROUND) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "skarlet_promise_3d", "inventory"));
         }
+
+        if (stack.isOf(RegaliaItems.GREATEST_FOE) && renderMode != ModelTransformation.Mode.GUI && renderMode != ModelTransformation.Mode.GROUND) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "greatest_foe_3d", "inventory"));
+        }
         return value;
     }
 }

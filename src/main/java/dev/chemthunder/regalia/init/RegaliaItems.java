@@ -1,10 +1,9 @@
 package dev.chemthunder.regalia.init;
 
 import dev.chemthunder.regalia.MasonsRegalia;
-import dev.chemthunder.regalia.item.divinity.DiscFragmentEssence;
-import dev.chemthunder.regalia.item.divinity.EffigyItem;
-import dev.chemthunder.regalia.item.divinity.EssenceItem;
+import dev.chemthunder.regalia.item.divinity.*;
 import dev.chemthunder.regalia.item.femboyihop.FemCookieItem;
+import dev.chemthunder.regalia.item.weaponry.FollyScytheItem;
 import dev.chemthunder.regalia.item.weaponry.FrostbearerItem;
 import dev.chemthunder.regalia.item.weaponry.HelianthiItem;
 import dev.chemthunder.regalia.item.weaponry.SkarletItem;
@@ -17,6 +16,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
+import javax.tools.Tool;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -41,16 +41,6 @@ public interface RegaliaItems {
             .maxCount(1)));
 
 
-    Item FEMCOOKIE = create("femcookie", new FemCookieItem(new FabricItemSettings()
-            .group(ItemGroup.FOOD)
-            .maxCount(16)
-            .food(new FoodComponent.Builder()
-                    .alwaysEdible()
-                    .hunger(1)
-                    .snack()
-                    .saturationModifier(1f)
-                    .build())));
-
     Item SKARLET_PROMISE = create("skarlet_promise", new SkarletItem(ToolMaterials.GOLD, 8, -2.6f, new FabricItemSettings()
             .group(ItemGroup.COMBAT)
             .fireproof()
@@ -71,6 +61,21 @@ public interface RegaliaItems {
     Item FROSTBEARER = create("frostbearer", new FrostbearerItem(ToolMaterials.DIAMOND, 2, -2.9f, new FabricItemSettings()
             .rarity(Rarity.RARE)
             .group(ItemGroup.COMBAT)));
+
+
+    Item FOLLYSCYTHE = create("sirens_call", new FollyScytheItem(ToolMaterials.NETHERITE, 2, -2.6f, new FabricItemSettings()
+            .group(ItemGroup.COMBAT)
+            .rarity(Rarity.EPIC)
+            .fireproof()));
+
+    Item BOUND_EFFIGY = create("bound_effigy", new BoundItem(ToolMaterials.NETHERITE, 1, -2.3f, new FabricItemSettings()
+            .fireproof()
+            .rarity(Rarity.UNCOMMON)
+            .maxDamage(1)));
+
+    Item GREATEST_FOE = create("greatest_foe", new GreatestFoeItem(ToolMaterials.NETHERITE, 5, -2.9f, new FabricItemSettings()
+            .maxCount(1)
+            .rarity(Rarity.UNCOMMON)));
 
     static <T extends Item> T create(String name, T item) {
         ITEMS.put(item, MasonsRegalia.id(name));

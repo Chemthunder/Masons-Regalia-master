@@ -11,4 +11,10 @@ public class RegaliaDamageSources {
             return Text.literal(entity.getName().getString() + " was banished to a higher plane");
         }
     }).setBypassesArmor();
+
+    public static final DamageSource EPITAPHAL = (new DamageSource("epitaphal") {
+        public Text getDeathMessage(LivingEntity entity) {
+            return Text.literal(entity.getName().getString() + "'s soul was deemed irredeemable");
+        }
+    }).setBypassesArmor();
 }
