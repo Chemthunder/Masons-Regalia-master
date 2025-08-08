@@ -42,7 +42,7 @@ public interface RegaliaItems {
             .group(ItemGroup.COMBAT)
             .fireproof()
             .rarity(Rarity.UNCOMMON)
-            ));
+    ));
 
     Item ESSENCE_DISC = create("essence_disc", new EssenceItem(new FabricItemSettings()
             .maxCount(1)
@@ -76,7 +76,6 @@ public interface RegaliaItems {
 
     static <T extends Item> T create(String name, T item) {
         ITEMS.put(item, MasonsRegalia.id(name));
-
         return item;
     }
     static void initialize() {
