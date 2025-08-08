@@ -2,7 +2,7 @@ package dev.chemthunder.regalia.init;
 
 import dev.chemthunder.regalia.MasonsRegalia;
 import dev.chemthunder.regalia.item.divinity.*;
-import dev.chemthunder.regalia.item.weaponry.FollyScytheItem;
+import dev.chemthunder.regalia.item.divinity.FollyScytheItem;
 import dev.chemthunder.regalia.item.weaponry.FrostbearerItem;
 import dev.chemthunder.regalia.item.weaponry.HelianthiItem;
 import dev.chemthunder.regalia.item.weaponry.SkarletItem;
@@ -24,7 +24,7 @@ public interface RegaliaItems {
 
     Item HELIANTHI = create("helianthi", new HelianthiItem(ToolMaterials.NETHERITE, 4, -2.7f, new  FabricItemSettings()
             .fireproof()
-            .rarity(Rarity.EPIC)
+            .rarity(Rarity.UNCOMMON)
             .group(ItemGroup.COMBAT)));
 
     Item SUNDERED_EFFIGY = create("sundered_effigy", new EffigyItem(new FabricItemSettings()
@@ -72,7 +72,7 @@ public interface RegaliaItems {
 
     Item GREATEST_FOE = create("greatest_foe", new GreatestFoeItem(ToolMaterials.NETHERITE, 5, -2.9f, new FabricItemSettings()
             .maxCount(1)
-            .rarity(Rarity.UNCOMMON)));
+            .rarity(Rarity.EPIC)));
 
     static <T extends Item> T create(String name, T item) {
         ITEMS.put(item, MasonsRegalia.id(name));
