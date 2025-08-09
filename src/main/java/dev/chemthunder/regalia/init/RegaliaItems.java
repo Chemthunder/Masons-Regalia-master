@@ -6,6 +6,7 @@ import dev.chemthunder.regalia.item.divinity.FollyScytheItem;
 import dev.chemthunder.regalia.item.weaponry.FrostbearerItem;
 import dev.chemthunder.regalia.item.weaponry.HelianthiItem;
 import dev.chemthunder.regalia.item.weaponry.SkarletItem;
+import dev.chemthunder.regalia.item.weaponry.SolitudeItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -22,7 +23,7 @@ public interface RegaliaItems {
 
     Map<Item, Identifier> ITEMS = new LinkedHashMap<>();
 
-    Item HELIANTHI = create("helianthi", new HelianthiItem(ToolMaterials.NETHERITE, 4, -2.7f, new  FabricItemSettings()
+    Item HELIANTHI = create("helianthi", new HelianthiItem(ToolMaterials.NETHERITE, 5, -2.7f, new  FabricItemSettings()
             .fireproof()
             .rarity(Rarity.UNCOMMON)
             .group(ItemGroup.COMBAT)));
@@ -60,7 +61,7 @@ public interface RegaliaItems {
             .group(ItemGroup.COMBAT)));
 
 
-    Item FOLLYSCYTHE = create("sirens_call", new FollyScytheItem(ToolMaterials.NETHERITE, 2, -2.6f, new FabricItemSettings()
+    Item FOLLYSCYTHE = create("sirens_call", new FollyScytheItem(ToolMaterials.NETHERITE, 4, -2.6f, new FabricItemSettings()
             .group(ItemGroup.COMBAT)
             .rarity(Rarity.EPIC)
             .fireproof()));
@@ -73,6 +74,11 @@ public interface RegaliaItems {
     Item GREATEST_FOE = create("greatest_foe", new GreatestFoeItem(ToolMaterials.NETHERITE, 5, -2.9f, new FabricItemSettings()
             .maxCount(1)
             .rarity(Rarity.EPIC)));
+
+    Item SOLITUDE = create("solitude", new SolitudeItem(ToolMaterials.NETHERITE, 5, -2.8f, new FabricItemSettings()
+            .rarity(Rarity.UNCOMMON)
+            .group(ItemGroup.COMBAT)
+            .fireproof()));
 
     static <T extends Item> T create(String name, T item) {
         ITEMS.put(item, MasonsRegalia.id(name));

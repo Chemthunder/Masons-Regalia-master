@@ -17,4 +17,10 @@ public class RegaliaDamageSources {
             return Text.literal(entity.getName().getString() + "'s soul was deemed irredeemable");
         }
     }).setBypassesArmor();
+
+    public static final DamageSource SOLITUDE = (new DamageSource("solitude") {
+        public Text getDeathMessage(LivingEntity entity) {
+            return Text.literal(entity.getName().getString() + "'s soul was carved in two'");
+        }
+    }).setBypassesArmor();
 }

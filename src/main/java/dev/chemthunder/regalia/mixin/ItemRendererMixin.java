@@ -32,6 +32,10 @@ public abstract class ItemRendererMixin {
         if (stack.isOf(RegaliaItems.FOLLYSCYTHE) && renderMode != ModelTransformation.Mode.GUI && renderMode != ModelTransformation.Mode.GROUND) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "follyscythe_3d", "inventory"));
         }
+
+        if (stack.isOf(RegaliaItems.SOLITUDE) && renderMode != ModelTransformation.Mode.GUI && renderMode != ModelTransformation.Mode.GROUND) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "solitude_3d", "inventory"));
+        }
         return value;
     }
 }
