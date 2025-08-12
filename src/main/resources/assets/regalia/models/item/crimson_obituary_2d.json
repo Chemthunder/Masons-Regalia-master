@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "regalia:item/frostbearer_2d"
+    "layer0": "regalia:item/crimson_obituary_2d"
   }
 }

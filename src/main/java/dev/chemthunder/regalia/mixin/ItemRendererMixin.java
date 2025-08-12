@@ -36,6 +36,14 @@ public abstract class ItemRendererMixin {
         if (stack.isOf(RegaliaItems.SOLITUDE) && renderMode != ModelTransformation.Mode.GUI && renderMode != ModelTransformation.Mode.GROUND) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "solitude_3d", "inventory"));
         }
+
+        if (stack.isOf(RegaliaItems.FROSTBEARER) && renderMode != ModelTransformation.Mode.GUI && renderMode != ModelTransformation.Mode.GROUND) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "frostbearer_3d", "inventory"));
+        }
+
+        if (stack.isOf(RegaliaItems.CRIMSON_OBITUARY) && renderMode != ModelTransformation.Mode.GUI && renderMode != ModelTransformation.Mode.GROUND) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "crimson_obituary_3d", "inventory"));
+        }
         return value;
     }
 }

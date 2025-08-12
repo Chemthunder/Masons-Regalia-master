@@ -80,6 +80,12 @@ public interface RegaliaItems {
             .group(ItemGroup.COMBAT)
             .fireproof()));
 
+    Item CRIMSON_OBITUARY = create("crimson_obituary", new HalberdItem(ToolMaterials.GOLD, 3, -2.3f, new FabricItemSettings()
+            .group(ItemGroup.COMBAT)
+            .fireproof()
+            .rarity(Rarity.UNCOMMON)
+            ));
+
     static <T extends Item> T create(String name, T item) {
         ITEMS.put(item, MasonsRegalia.id(name));
         return item;
