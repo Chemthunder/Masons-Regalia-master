@@ -20,5 +20,7 @@
 
   "item.regalia.bound_effigy": "Bound Effigy",
 
-  "item.regalia.solitude": "Solitude"
+  "item.regalia.solitude": "Solitude",
+
+  "itemGroup.regalia.mason": "§eMason's Regalia"
 }

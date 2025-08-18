@@ -25,10 +25,6 @@ public abstract class ItemRendererMixin {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "skarlet_promise_3d", "inventory"));
         }
 
-        if (stack.isOf(RegaliaItems.GREATEST_FOE) && renderMode != ModelTransformation.Mode.GUI && renderMode != ModelTransformation.Mode.GROUND) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "greatest_foe_3d", "inventory"));
-        }
-
         if (stack.isOf(RegaliaItems.FOLLYSCYTHE) && renderMode != ModelTransformation.Mode.GUI && renderMode != ModelTransformation.Mode.GROUND) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "follyscythe_3d", "inventory"));
         }
@@ -42,7 +38,7 @@ public abstract class ItemRendererMixin {
         }
 
         if (stack.isOf(RegaliaItems.CRIMSON_OBITUARY) && renderMode != ModelTransformation.Mode.GUI && renderMode != ModelTransformation.Mode.GROUND) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "crimson_obituary_3d", "inventory"));
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(MasonsRegalia.MOD_ID, "crimson_3d", "inventory"));
         }
         return value;
     }

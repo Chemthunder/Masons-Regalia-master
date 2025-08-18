@@ -26,21 +26,21 @@ public interface RegaliaItems {
     Item HELIANTHI = create("helianthi", new HelianthiItem(ToolMaterials.NETHERITE, 5, -2.7f, new  FabricItemSettings()
             .fireproof()
             .rarity(Rarity.UNCOMMON)
-            .group(ItemGroup.COMBAT)));
+            .group(RegaliaItemGroup.MASON)));
 
     Item SUNDERED_EFFIGY = create("sundered_effigy", new EffigyItem(new FabricItemSettings()
             .maxCount(1)
             .fireproof()
-            .group(ItemGroup.COMBAT)));
+            .group(RegaliaItemGroup.MASON)));
 
     Item BROKEN_EFFIGY = create("broken_effigy", new Item(new FabricItemSettings()
             .fireproof()
-            .group(ItemGroup.COMBAT)
+            .group(RegaliaItemGroup.MASON)
             .maxCount(1)));
 
 
     Item SKARLET_PROMISE = create("skarlet_promise", new SkarletItem(ToolMaterials.GOLD, 8, -2.6f, new FabricItemSettings()
-            .group(ItemGroup.COMBAT)
+            .group(RegaliaItemGroup.MASON)
             .fireproof()
             .rarity(Rarity.UNCOMMON)
     ));
@@ -49,20 +49,23 @@ public interface RegaliaItems {
             .maxCount(1)
             .fireproof()
             .rarity(Rarity.RARE)
-            .group(ItemGroup.MISC)));
+            .group(RegaliaItemGroup.MASON))
+    );
 
     Item ESSENCE_PIECE = create("essence_piece", new DiscFragmentEssence(new FabricItemSettings()
             .maxCount(8)
-            .group(ItemGroup.MISC)));
+            .group(RegaliaItemGroup.MASON))
+    );
 
 
-    Item FROSTBEARER = create("frostbearer", new FrostbearerItem(ToolMaterials.DIAMOND, 2, -2.9f, new FabricItemSettings()
+    Item FROSTBEARER = create("frostbearer", new FrostbearerItem(ToolMaterials.DIAMOND, 5, -2.9f, new FabricItemSettings()
             .rarity(Rarity.RARE)
-            .group(ItemGroup.COMBAT)));
+            .group(RegaliaItemGroup.MASON))
+    );
 
 
     Item FOLLYSCYTHE = create("sirens_call", new FollyScytheItem(ToolMaterials.NETHERITE, 4, -2.6f, new FabricItemSettings()
-            .group(ItemGroup.COMBAT)
+            .group(RegaliaItemGroup.MASON)
             .rarity(Rarity.EPIC)
             .fireproof()));
 
@@ -71,17 +74,13 @@ public interface RegaliaItems {
             .rarity(Rarity.UNCOMMON)
             .maxDamage(1)));
 
-    Item GREATEST_FOE = create("greatest_foe", new GreatestFoeItem(ToolMaterials.NETHERITE, 5, -2.9f, new FabricItemSettings()
-            .maxCount(1)
-            .rarity(Rarity.EPIC)));
-
     Item SOLITUDE = create("solitude", new SolitudeItem(ToolMaterials.NETHERITE, 5, -2.8f, new FabricItemSettings()
             .rarity(Rarity.UNCOMMON)
-            .group(ItemGroup.COMBAT)
+            .group(RegaliaItemGroup.MASON)
             .fireproof()));
 
-    Item CRIMSON_OBITUARY = create("crimson_obituary", new HalberdItem(ToolMaterials.GOLD, 3, -2.3f, new FabricItemSettings()
-            .group(ItemGroup.COMBAT)
+    Item CRIMSON_OBITUARY = create("crimson", new HalberdItem(ToolMaterials.GOLD, 3, -2.3f, new FabricItemSettings()
+            .group(RegaliaItemGroup.MASON)
             .fireproof()
             .rarity(Rarity.UNCOMMON)
             ));

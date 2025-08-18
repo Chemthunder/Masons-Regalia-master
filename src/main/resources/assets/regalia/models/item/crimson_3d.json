@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "regalia:item/crimson_obituary_3d"
+		"layer0": "regalia:item/crimson_3d"
 	},
 	"display": {
 		"thirdperson_righthand": {
